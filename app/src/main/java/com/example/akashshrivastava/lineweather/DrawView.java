@@ -43,18 +43,8 @@ public class DrawView extends View {
     public DrawView(Context context) {
 
         super(context);
-        paint.setColor(Color.WHITE);
-        paint.setAntiAlias(true);
-        paint.setStrokeWidth(6f);
-        paint.setStrokeJoin(Paint.Join.ROUND);
-        paint.setStrokeCap(Paint.Cap.ROUND);
 
-        paint3.setColor(Color.argb(6, 234, 234, 234));
-        paint3.setStrokeWidth(4f);
-        paint3.setAntiAlias(true);
 
-        paint3.setStrokeJoin(Paint.Join.ROUND);
-        paint3.setStrokeCap(Paint.Cap.ROUND);
 
 
 
@@ -210,6 +200,15 @@ public class DrawView extends View {
 
         int step = 0;
 
+
+        paint3.setColor(Color.argb(9, 214, 214, 214));
+        paint3.setStrokeWidth(4f);
+        paint3.setAntiAlias(true);
+
+        paint3.setStrokeJoin(Paint.Join.ROUND);
+        paint3.setStrokeCap(Paint.Cap.ROUND);
+
+
         //Drawing the grid...
         while (step < width) {
             canvas.drawLine(step, 0, step,height, paint3);
@@ -229,9 +228,14 @@ public class DrawView extends View {
             temperature += 1320;
             hour += 50;
 
-            // TODO: resize based on scale.
+            paint.setColor(Color.WHITE);
+            paint.setAntiAlias(true);
+            paint.setStrokeWidth(6f);
+            paint.setStrokeJoin(Paint.Join.ROUND);
+            paint.setStrokeCap(Paint.Cap.ROUND);
 
-            canvas.drawLine(50, 50, 50, 1320, paint); //y axis
+            // TODO: resize based on scale.
+ //           canvas.drawLine(50, 50, 50, 1320, paint); //y axis
             canvas.drawLine(50, 1320, 1550, 1320, paint); //x Axis
 //
 //            for (int i = 100; i <= 1000; i += 100) {

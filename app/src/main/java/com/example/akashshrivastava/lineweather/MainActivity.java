@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity implements DownloadTaskListe
     private LinearLayout llXAxis;
     private TextView txtFirst;
 
-// TODO: set the draw view after the view has been inflated
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements DownloadTaskListe
     @Override
     public void onTaskCompleted(WeatherData weatherData) {
         if (drawView != null) {
-            // TODO: set data entries
             drawView.setDataEntries(weatherData.getEntries());
 
             double maxtemp = weatherData.getMaxTemperature();
@@ -59,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements DownloadTaskListe
             mmaxTemp.setText("Todays maximum temperature :" + maxtemp);
             mminTemp.setText("Today minimum temperature : " + mintemp);
 
+
+            //TODO set image for each type of weather it is for presentation..
 
             Log.d("MxT" + maxtemp , "MnT" + mintemp);
 

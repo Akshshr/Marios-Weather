@@ -28,7 +28,7 @@
             android:id="@+id/llYAxis"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingLeft="5dp"
+            android:paddingLeft="2dp"
             android:paddingRight="2dp">
 
             <TextView
@@ -137,6 +137,8 @@
             <com.example.akashshrivastava.lineweather.DrawView
                 android:id="@+id/graphView"
                 android:layout_width="match_parent"
+                android:layout_marginEnd="10dp"
+
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
