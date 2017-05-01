@@ -16,11 +16,6 @@ public class DataEntry {
         this.type = type;
     }
 
-    public DataEntry(String type){
-
-        this.type = type;
-    }
-
 
     public void setTime(String time) {
         this.time = time;

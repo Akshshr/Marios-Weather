@@ -3,7 +3,7 @@
     <string name="gridColor">#EAEAEA</string>
 
     <string name="xaxis">Hours of the day</string>
-    <string name="yaxis">Temperature C "\u00B0"</string>
+    <string name="yaxis">Temperature "\u00B0"C </string>
 
 
     <string name="minLable">Today\'s minimum temperature :</string>

@@ -25,7 +25,7 @@ public class DrawView extends View {
 
     private List <DataEntryPoint> values = new ArrayList<>();
 
-
+        //Test with pseudo array..
 //    float[] xValues = new float[]{0, 1, 21, 3, 3, 5, 19, 1, 21, 4, 22};
 //    float[] yValues = new float[]{0, 2, 4, 6, 8, 10, 12, 14, 16, 5, 22};
 
@@ -83,7 +83,6 @@ public class DrawView extends View {
 
 
             // TODO: find a way to get the hour from JSON time
-
         //    SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-DDThh:mm:ssTZD", Locale.ENGLISH);
 ////
 //            try {
@@ -129,9 +128,6 @@ public class DrawView extends View {
                 largest = dataEntryPoint.getHour();
             }
         }
-//        for (int i = 0; i < xValues.length; i++)
-//            if (xValues[i] > largest)
-//                largest = xValues[i];
         return largest;
     }
 
@@ -156,10 +152,6 @@ public class DrawView extends View {
                 largest = (float)dataEntryPoint.getTemperature();
             }
         }
-//
-//        for (int i = 0; i < yValues.length; i++)
-//            if (yValues[i] > largest)
-//                largest = yValues[i];
         return largest;
     }
 
@@ -171,10 +163,6 @@ public class DrawView extends View {
                 smallest = (float)dataEntryPoint.getTemperature();
             }
         }
-//
-//        for (int i = 0; i < yValues.length; i++)
-//            if (yValues[i] < smallest)
-//                smallest = yValues[i];
         return smallest;
     }
 
@@ -197,7 +185,6 @@ public class DrawView extends View {
         if (values == null || values.size() == 0) {
             return;
         }
-//        drawGrid(canvas, 50, 1400, xValues.length, yValues.length);
 
         // Get the last point of
         DataEntryPoint last = new DataEntryPoint(0, 0);
@@ -205,7 +192,6 @@ public class DrawView extends View {
             last = values.get(0);
         }
 
-        //last.y = 1320;
 
 
 //        assert yValues.length >= xValues.length;
@@ -244,28 +230,17 @@ public class DrawView extends View {
             hour += 50;
 
             // TODO: resize based on scale.
-            // Change the values of
-//            Vec.y *= 40;
-//            Vec.x *= 40;
+
+            canvas.drawLine(50, 50, 50, 1320, paint); //y axis
+            canvas.drawLine(50, 1320, 1550, 1320, paint); //x Axis
 //
-//            Vec.y *= -1;
-//            Vec.y += 1320;
-//            Vec.x += 50;
+//            for (int i = 100; i <= 1000; i += 100) {
 //
-            canvas.drawLine(50, 50, 50, 1320, paint3); //y axis
-            canvas.drawLine(50, 1320, 1550, 1320, paint3); //x Axis
-
-            for (int i = 100; i <= 1000; i += 100) {
-
-
-                //x grid can be the max value / 5, to give you the totadl number of lines
-                canvas.drawLine(50 + i, 50, 50 + i, 1320, paint3); //y axis
-
-                //Y grid can be the max value / 5, to give you the totadl number of lines
-                canvas.drawLine(50, 1320 - i, 1550, 1320 - i, paint3); //x Axis
-
-
-            }
+//                //Y grid can be the max value / 5, to give you the totadl number of lines
+//                canvas.drawLine(50, 1320 - i, 1550, 1320 - i, paint3); //x Axis
+//
+//
+//            }
 
             paint2.setColor(Color.GREEN);
             paint2.setAntiAlias(true);
@@ -276,51 +251,7 @@ public class DrawView extends View {
             drawLine(canvas, last, convertedPoint);
             last = convertedPoint;
 
-
         }
-//
-//        //Drawing the points..
-//        for (DataEntryPoint Vec : Vectors) {
-//
-//            // TODO: add a static constant for variables that are being reused
-//            Vec.y *= 40;
-//            Vec.x *= 40;
-//
-//            Vec.y *= -1;
-//            Vec.y += 1320;
-//            Vec.x += 50;
-//
-//
-//            canvas.drawLine(50, 50, 50, 1320, paint3); //y axis
-//            canvas.drawLine(50, 1320, 1550, 1320, paint3); //x Axis
-//
-//
-//                for(int i = 100 ; i <= 1000 ; i+=100){
-//
-//
-//                    //x grid can be the max value / 5, to give you the totadl number of lines
-//                    canvas.drawLine( 50 + i, 50 , 50 + i, 1320, paint3); //y axis
-//
-//                    //Y grid can be the max value / 5, to give you the totadl number of lines
-//                    canvas.drawLine( 50, 1320 - i, 1550, 1320 - i, paint3); //x Axis
-//
-//
-//                }
-//
-//
-//            paint2.setColor(Color.GREEN);
-//            paint2.setAntiAlias(true);
-//
-//            canvas.drawCircle(Vec.x, Vec.y, 20, paint2);
-//
-//
-//            drawLine(canvas, last, Vec);
-//
-//            last = Vec;
-//
-//
-//        }
-       // invalidate();
 
     }
 
