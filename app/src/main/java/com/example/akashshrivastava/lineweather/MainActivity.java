@@ -10,18 +10,26 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
+
+import org.w3c.dom.Text;
 
 import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity implements DownloadTaskListener {
 
     DrawView drawView;
+    WeatherData weatherData;
 
+    TextView mminTemp;
+    TextView mmaxTemp;
+    ImageView weatherType;
 // TODO: set the draw view after the view has been inflated
 
 
@@ -32,8 +40,6 @@ public class MainActivity extends AppCompatActivity implements DownloadTaskListe
 
         DownloadTask task = new DownloadTask(this);
         task.execute();
-
-
 
         // TODO: get from xml
         // Get ID
@@ -97,6 +103,21 @@ public class MainActivity extends AppCompatActivity implements DownloadTaskListe
         if (drawView != null) {
             // TODO: set data entries
             drawView.setDataEntries(weatherData.getEntries());
+
+            double maxtemp = weatherData.getMaxTemperature();
+            double mintemp = weatherData.getMinTemperature();
+            
+            weatherType = (ImageView) findViewById(R.id.weatherType);
+            mmaxTemp = (TextView) findViewById(R.id.MaxTemp);
+            mminTemp = (TextView) findViewById(R.id.MinTemp);
+
+            mmaxTemp.setText("Todays maximum temperature :" + maxtemp);
+            mminTemp.setText("Today minimum temperature : " + mintemp);
+
+
+
+            Log.d("Mx" + maxtemp , "mn" + mintemp);
+
         }
         Log.d("TESTING", "Weather data: " + weatherData);
 

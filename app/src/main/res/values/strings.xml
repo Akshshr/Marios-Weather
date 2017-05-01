@@ -1,8 +1,13 @@
 <resources>
-    <string name="app_name">Line Weather</string>
+    <string name="app_name">Marios Weather</string>
     <string name="gridColor">#EAEAEA</string>
 
     <string name="xaxis">Hours of the day</string>
-    <string name="yaxis">Temperature</string>
+    <string name="yaxis">Temperature C "\u00B0"</string>
+
+
+    <string name="minLable">Today\'s minimum temperature :</string>
+
+    <string name="maxLable">Today\'s maximum temperature :</string>
 
 </resources>

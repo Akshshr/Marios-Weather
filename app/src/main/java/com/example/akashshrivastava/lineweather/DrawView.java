@@ -1,6 +1,6 @@
 package com.example.akashshrivastava.lineweather;
 
-import android.graphics.PointF;
+
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -12,16 +12,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by akashshrivastava on 2017-04-26.
@@ -124,41 +117,7 @@ public class DrawView extends View {
 
     }
 
-   /* public DataEntryPoint[] mapPoints(float[] xValues, float[] yValues) {
 
-        DataEntryPoint[] points = new DataEntryPoint[xValues.length];
-
-        for (int i = 0; i < xValues.length; i++) {
-
-            points[i] = new DataEntryPoint();
-            points[i].x = xValues[i];
-            points[i].y = yValues[i];
-
-        }
-        Log.e("map poitns", "map points");
-
-        return points;
-
-    }*/
-
-//    public DataEntryPoint[] mapPoints(float[] xValues, float[] yValues) {
-//
-//        DataEntryPoint[] points = new DataEntryPoint[xValues.length];
-//
-//        for (int i = 0; i < xValues.length; i++) {
-//
-//            points[i] = new DataEntryPoint();
-//            points[i].x = xValues[i];
-//            points[i].y = yValues[i];
-//
-//        }
-//        Log.e("map poitns", "map points");
-//
-//        return points;
-//
-//    }
-//
-//    DataEntryPoint[] Vectors = mapPoints(yValues, xValues);
 
 
 
@@ -184,11 +143,7 @@ public class DrawView extends View {
                 smallest = dataEntryPoint.getHour();
             }
         }
-//
-//
-//        for (int i = 0; i < xValues.length; i++)
-//            if (xValues[i] < smallest)
-//                smallest = xValues[i];
+
         return smallest;
     }
 

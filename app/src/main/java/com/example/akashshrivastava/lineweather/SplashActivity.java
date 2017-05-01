@@ -9,33 +9,32 @@ import com.androidnetworking.AndroidNetworking;
 
 public class SplashActivity extends AppCompatActivity {
 
-    public static int SPLAST_TIMEOUT = 500;
+    public static int SPLAST_TIMEOUT = 2500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_splash);
+       setContentView(R.layout.activity_splash);
 
-//        AndroidNetworking.initialize(getApplicationContext());
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//                //Download the thing here
-//
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                //Download the thing here
+
 //                DownloadTask task = new DownloadTask();
 //                task.execute();
-//
-//
-//
-//
-//            }
-//        },SPLAST_TIMEOUT);
-//
-//        Intent signUpIntent = new Intent(SplashActivity.this, MainActivity.class);
-//        startActivity(signUpIntent);
-//        finish();
+
+
+
+
+            }
+        },SPLAST_TIMEOUT);
+
+        Intent signUpIntent = new Intent(SplashActivity.this, MainActivity.class);
+        startActivity(signUpIntent);
+        finish();
 
 
 

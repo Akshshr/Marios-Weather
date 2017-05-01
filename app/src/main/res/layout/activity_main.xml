@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:gravity="bottom"
-            android:text="Temperature"
+            android:text="@string/yaxis"
             android:textColor="@android:color/white"
             android:textSize="12sp"
             android:visibility="visible" />
@@ -113,9 +113,9 @@
         </LinearLayout>
 
         <View
-            android:layout_width="0.5dp"
+            android:layout_width="1.5dp"
             android:layout_height="match_parent"
-            android:background="@android:color/black" />
+            android:background="@color/gridColor" />
 
         <LinearLayout
             android:id="@+id/graphHolder"
@@ -160,8 +160,9 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@android:color/black" />
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/gridColor" />
 
         <LinearLayout
             android:id="@+id/llXAxis"
@@ -389,24 +390,59 @@
                 android:textSize="@dimen/text_size" />
         </LinearLayout>
 
+
+
         <TextView
+            android:id="@+id/xLegend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/llXAxis"
             android:gravity="center"
             android:paddingTop="5dp"
-            android:text="Time"
+            android:layout_weight="1"
+
+            android:text="@string/xaxis"
             android:textColor="@android:color/white"
             android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/txtInfo"
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
+            android:layout_below="@id/xLegend"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_height="fill_parent" >
+        <TextView
+            android:id="@+id/MinTemp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="MinTemp : "
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/weatherType"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/MaxTemp"
+            android:layout_width="0dp"
+            android:textSize="14sp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Information about graph"
+            android:text="MaxTemp:"
             android:textColor="@android:color/white" />
+
+
+
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
