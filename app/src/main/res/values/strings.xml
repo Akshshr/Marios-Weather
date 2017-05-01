@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Line Weather</string>
+    <string name="gridColor">#EAEAEA</string>
+
+    <string name="xaxis">Hours of the day</string>
+    <string name="yaxis">Temperature</string>
+
+</resources>
