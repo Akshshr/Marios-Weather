@@ -6,6 +6,6 @@ package com.example.akashshrivastava.lineweather;
 
 public interface DownloadTaskListener {
 
-    void onTaskCompleted(WeatherData weatherData);
+    void onTaskCompleted(WeatherData weatherData, DataEntry dataEntry);
 
 }

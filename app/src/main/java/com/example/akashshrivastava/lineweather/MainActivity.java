@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements DownloadTaskListe
     }
 
     @Override
-    public void onTaskCompleted(WeatherData weatherData) {
+    public void onTaskCompleted(WeatherData weatherData, DataEntry dataEntry) {
         if (drawView != null) {
             drawView.setDataEntries(weatherData.getEntries());
 
@@ -55,6 +55,25 @@ public class MainActivity extends AppCompatActivity implements DownloadTaskListe
             mmaxTemp.setText("Todays maximum temperature :" + maxtemp);
             mminTemp.setText("Today minimum temperature : " + mintemp);
 
+
+            String type = dataEntry.getType();
+
+            Log.d("Type logging" , "Type" + type);
+
+            if(type.equals("sun")){
+                weatherType.setImageResource(R.drawable.sun);
+            }
+            else if (type.equals("cloud")){
+                weatherType.setImageResource(R.drawable.clouds);
+            }
+
+            else if (type.equals("rain"))
+            {
+                weatherType.setImageResource(R.drawable.morning_rain);
+            }
+            else {
+                weatherType.setImageResource(R.drawable.snowflake);
+            }
 
             //TODO set image for each type of weather it is for presentation..
 

@@ -149,9 +149,18 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
 
             WeatherData weatherData = new WeatherData(entries, minTemperature, maxTemperature);
 
+            JSONObject entriesArrayJSONObject = entriesArray.getJSONObject(0);
+
+            String type = entriesArrayJSONObject.getString("type");
+            String time = entriesArrayJSONObject.getString("time");
+            double temperature = entriesArrayJSONObject.getDouble("temperature");
+
+
+            DataEntry dataEntry  = new DataEntry(time, temperature, type);
+
 
             // TODO: inform the listener about the results
-            listener.onTaskCompleted(weatherData);
+            listener.onTaskCompleted(weatherData, dataEntry);
 
             Log.d("TESTING", "onTaskCompleted: " + weatherData);
             //Log.i("Entries", entries);
