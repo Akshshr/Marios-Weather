@@ -41,16 +41,8 @@ public class DrawView extends View {
 
 
     public DrawView(Context context) {
-
         super(context);
-
-
-
-
-
         Log.e("draw view", " draw view");
-
-
     }
 
     public DrawView(Context context, AttributeSet attributeSet){
@@ -91,7 +83,6 @@ public class DrawView extends View {
                 values.add(dataEntryPoint);
             }
         }
-
         // Invalidate the view
         invalidate();
 
@@ -225,7 +216,7 @@ public class DrawView extends View {
             temperature *= 40;
 
             temperature *= -1;
-            temperature += 1320;
+            temperature += 1120;
             hour += 50;
 
             paint.setColor(Color.WHITE);
